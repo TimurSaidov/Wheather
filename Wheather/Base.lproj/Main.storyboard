@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Wheather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6GV-Uy-nMB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0db-9X-5VS">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INW-aA-wvK">
+                                <rect key="frame" x="354" y="64" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0L8-tz-Wrp"/>
+                                    <constraint firstAttribute="width" constant="40" id="WiE-rY-LEz"/>
+                                </constraints>
+                                <state key="normal" image="reload"/>
+                                <connections>
+                                    <action selector="reloadButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a1B-4R-d0t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0db-9X-5VS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6tJ-SM-THV"/>
+                            <constraint firstItem="6GV-Uy-nMB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CSy-yN-Tek"/>
+                            <constraint firstItem="0db-9X-5VS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YAq-hW-aud"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="INW-aA-wvK" secondAttribute="trailing" constant="20" id="aeq-Qk-Wcm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6GV-Uy-nMB" secondAttribute="trailing" id="e9m-Ec-wuv"/>
+                            <constraint firstAttribute="bottom" secondItem="6GV-Uy-nMB" secondAttribute="bottom" id="hkr-4M-wYX"/>
+                            <constraint firstItem="6GV-Uy-nMB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jqx-34-NQ5"/>
+                            <constraint firstItem="INW-aA-wvK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wKy-12-Y9N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="0db-9X-5VS" id="sia-Vy-V69"/>
+                        <outlet property="mapView" destination="6GV-Uy-nMB" id="gO9-Bb-AcX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="reload" width="40" height="40"/>
+    </resources>
+</document>
